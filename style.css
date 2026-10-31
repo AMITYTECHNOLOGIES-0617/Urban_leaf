@@ -1,0 +1,326 @@
+/* Urban Leaf Café – demo by AMITY TECHNOLOGIES. Change colours here. */
+:root {
+  --cream: #faf5ea;
+  --cream-dark: #f0e6d2;
+  --green: #2f4a3a;
+  --green-dark: #213529;
+  --brown: #422816;
+  --text: #2b2118;
+  --border: #e0d3ba;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--cream);
+}
+
+h1,
+h2,
+h3,
+.btn,
+.nav-links,
+.logo,
+.price {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--green);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 56px 0;
+}
+
+.section-alt {
+  background: var(--cream-dark);
+}
+
+h1 {
+  font-size: 2.1rem;
+  line-height: 1.2;
+  color: var(--brown);
+  margin: 0 0 16px;
+}
+
+h2 {
+  font-size: 1.7rem;
+  color: var(--green);
+  margin: 0 0 16px;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin: 0 0 6px;
+  color: var(--brown);
+}
+
+.note {
+  font-size: .9rem;
+  color: #5d5246;
+  font-style: italic;
+}
+
+:focus-visible {
+  outline: 3px solid var(--brown);
+  outline-offset: 2px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  background: var(--brown);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid var(--green);
+  transition: background .2s, color .2s;
+}
+
+.btn:hover {
+  background: var(--green-dark);
+  border-color: var(--green-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--green);
+}
+
+.btn-outline:hover {
+  background: var(--green);
+  color: #fff;
+}
+
+.btn-small {
+  padding: 8px 16px;
+  font-size: .9rem;
+}
+
+.btn-row,
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Header */
+.site-header {
+  background: var(--cream);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--green);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: none;
+  gap: 22px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: .95rem;
+}
+
+.nav-links a:hover {
+  color: var(--brown);
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  padding: 40px 0 56px;
+}
+
+.hero-inner {
+  display: grid;
+  gap: 28px;
+  align-items: center;
+}
+
+.hero img {
+  border: 1px solid var(--border);
+}
+
+/* Layout helpers */
+.two-col {
+  display: grid;
+  gap: 28px;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+}
+
+.cards .card {
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 20px;
+}
+
+.card p {
+  margin: 0 0 8px;
+  font-size: .95rem;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--green);
+}
+
+.center {
+  text-align: center;
+}
+
+.icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
+address {
+  font-style: normal;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--brown);
+  color: #f4ead8;
+  padding: 36px 0 28px;
+}
+
+.site-footer a {
+  color: #f4ead8;
+}
+
+.footer-inner {
+  display: grid;
+  gap: 16px;
+}
+
+.footer-inner p {
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.credit {
+  font-size: .85rem;
+  opacity: .85;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 2.6rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  .nav-links {
+    display: flex;
+  }
+
+  .hero-inner,
+  .two-col {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn {
+    transition: none;
+  }
+}
